@@ -4,15 +4,12 @@
 #
 Name     : R-sessioninfo
 Version  : 1.1.1
-Release  : 5
+Release  : 6
 URL      : https://cran.r-project.org/src/contrib/sessioninfo_1.1.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sessioninfo_1.1.1.tar.gz
 Summary  : R Session Information
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-cli
-Requires: R-rlang
-Requires: R-withr
 BuildRequires : R-cli
 BuildRequires : R-rlang
 BuildRequires : R-withr
@@ -35,10 +32,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541477343
+export SOURCE_DATE_EPOCH=1552847165
 
 %install
-export SOURCE_DATE_EPOCH=1541477343
+export SOURCE_DATE_EPOCH=1552847165
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -74,8 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library sessioninfo|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  sessioninfo || :
 
 
 %files
@@ -101,3 +97,24 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/sessioninfo/help/sessioninfo.rdx
 /usr/lib64/R/library/sessioninfo/html/00Index.html
 /usr/lib64/R/library/sessioninfo/html/R.css
+/usr/lib64/R/library/sessioninfo/tests/testthat.R
+/usr/lib64/R/library/sessioninfo/tests/testthat/fixtures/MD5
+/usr/lib64/R/library/sessioninfo/tests/testthat/fixtures/biobase.rda
+/usr/lib64/R/library/sessioninfo/tests/testthat/fixtures/descs.rda
+/usr/lib64/R/library/sessioninfo/tests/testthat/fixtures/devtools-deps.rda
+/usr/lib64/R/library/sessioninfo/tests/testthat/fixtures/devtools-info-unix.rda
+/usr/lib64/R/library/sessioninfo/tests/testthat/fixtures/devtools-info-windows.rda
+/usr/lib64/R/library/sessioninfo/tests/testthat/fixtures/devtools.rda
+/usr/lib64/R/library/sessioninfo/tests/testthat/fixtures/fsdfgwetdhsdfhq4yqh_0.0.0.9000.tar.gz
+/usr/lib64/R/library/sessioninfo/tests/testthat/fixtures/installed.rda
+/usr/lib64/R/library/sessioninfo/tests/testthat/fixtures/memoise.rda
+/usr/lib64/R/library/sessioninfo/tests/testthat/fixtures/no-remote-repo.rda
+/usr/lib64/R/library/sessioninfo/tests/testthat/fixtures/no-sha.rda
+/usr/lib64/R/library/sessioninfo/tests/testthat/test-dependent-packages.R
+/usr/lib64/R/library/sessioninfo/tests/testthat/test-loaded-packages.R
+/usr/lib64/R/library/sessioninfo/tests/testthat/test-package-info.R
+/usr/lib64/R/library/sessioninfo/tests/testthat/test-platform-info.R
+/usr/lib64/R/library/sessioninfo/tests/testthat/test-printing.R
+/usr/lib64/R/library/sessioninfo/tests/testthat/test-session-info.R
+/usr/lib64/R/library/sessioninfo/tests/testthat/test-utils.R
+/usr/lib64/R/library/sessioninfo/tests/testthat/test-warnings.R
