@@ -4,7 +4,7 @@
 #
 Name     : R-sessioninfo
 Version  : 1.1.1
-Release  : 12
+Release  : 13
 URL      : https://cran.r-project.org/src/contrib/sessioninfo_1.1.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sessioninfo_1.1.1.tar.gz
 Summary  : R Session Information
